@@ -53,7 +53,7 @@ public class SummerCustomRealm extends AuthorizingRealm {
 
         Set<String> roleNameSet = summerSecurity.getRoleNameSet(username);
 
-        Set<String> permissionNameSet = new HashSet<String>();
+        Set<String> permissionNameSet = new HashSet<>();
         if (roleNameSet != null && roleNameSet.size() > 0) {
             for (String roleName : roleNameSet) {
                 Set<String> currentPermissionNameSet = summerSecurity.getPermissionNameSet(roleName);
